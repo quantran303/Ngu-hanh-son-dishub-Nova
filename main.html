@@ -78,11 +78,13 @@
 
 <body class="bg-theme-light font-sans text-gray-800 antialiased">
 
+    <link rel="icon" type="image/ico" href="img/logo copy.jpg">
 
     <!-- Thanh Điều Hướng (Header) -->
     <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-white/50 backdrop-blur-sm">
         <nav class="container mx-auto px-6 py-3 flex items-center justify-between">
             <a class="font-display font-bold text-xl text-theme-primary flex items-center" href="#home">
+                <img src="img/logo.jpg" alt="Logo NOVA" class="h-14 w-auto mr-2"> Ngũ Hành Sơn Discovery Hub
             </a>
             <div class="hidden md:flex gap-3 items-center">
                 <a class="nav-link px-3 py-2" href="#home">Trang chủ</a>
@@ -369,6 +371,7 @@
                                 <span class="font-medium">⏱️ Thời lượng: 3-4 tiếng</span>
                                 <span class="font-bold text-theme-primary text-lg">Từ 3xx.xxx VNĐ</span>
                             </div>
+                            <button id="tour1" onclick="openTourModal('Tour Lướt Ngũ Hành')" class="w-full bg-theme-primary text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-emerald-600 transition-all duration-300">
                             Đặt tour ngay
                         </button>
                         </div>
@@ -581,10 +584,26 @@
 
 
 
+    <div id="iframeModal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm hidden">
+
+        <div class="bg-white w-11/12 md:w-3/4 lg:w-1/2 rounded-lg overflow-hidden shadow-lg">
+
+            <!-- Header -->
+            <div class="flex justify-between items-center p-4 border-b">
+                <h2 class="text-lg font-semibold">Thông tin về tour</h2>
+                <button onclick="closeIframeModal()" class="text-gray-500 hover:text-black text-xl">
         &times;
       </button>
+            </div>
 
+            <!-- Body (ONLY iframe) -->
+            <div class="w-full h-[80vh] p-0">
+                <a href="" id="detailLink" class="ms-3 underline-offset-1 font-bold ">Go for detail -></a>
+                <iframe src="" class="w-full h-full border-0" id="iframePreview"></iframe>
+            </div>
 
+        </div>
+    </div>
 
 
 
