@@ -1,0 +1,18 @@
+-- SQL tạo database và tables
+CREATE DATABASE IF NOT EXISTS tour_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE tour_db;
+
+CREATE TABLE IF NOT EXISTS bookings (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    phone VARCHAR(20),
+    people INT,
+    tour VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS wishes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    wish TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
