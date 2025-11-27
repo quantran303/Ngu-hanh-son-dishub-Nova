@@ -1,0 +1,88 @@
+<!-- 🎮 Trang Quiz / Mini game -->
+<section id="quiz" class="pt-28 pb-20 bg-white">
+    <div class="container mx-auto px-6 max-w-2xl">
+        <div id="quiz-container" class="bg-theme-light p-8 md:p-12 rounded-2xl shadow-xl text-center">
+            <!-- Bắt đầu Quiz -->
+            <div id="quiz-start">
+                <h2 class="font-display text-4xl font-bold text-gray-800 mb-4">🎮 Quiz Vui</h2>
+                <p class="text-xl text-gray-600 mb-10">Bạn mang năng lượng "Hành" nào trong Ngũ Hành Sơn?</p>
+                <button onclick="startQuiz()" class="bg-theme-primary text-white font-bold py-3 px-10 rounded-full text-lg shadow-lg hover:bg-emerald-600 transition-all duration-300 transform hover:scale-105">
+                    Bắt đầu ngay!
+                </button>
+            </div>
+
+            <!-- Câu hỏi Quiz -->
+            <div id="quiz-question-area" class="hidden">
+                <p id="question-progress" class="font-semibold text-theme-primary mb-4">Câu 1/5</p>
+                <h3 id="question-text" class="font-display text-3xl font-bold text-gray-800 mb-10"></h3>
+                <div id="options-container" class="space-y-4">
+                    <!-- Các lựa chọn sẽ được JS chèn vào đây -->
+                </div>
+            </div>
+
+            <!-- Kết quả Quiz -->
+            <div id="quiz-result-area" class="hidden">
+                <h2 class="font-display text-3xl font-bold text-gray-800 mb-6">Kết quả của bạn...</h2>
+                <div id="result-icon" class="text-8xl mb-6"></div>
+                <h3 id="result-title" class="font-display text-4xl font-bold mb-4"></h3>
+                <p id="result-description" class="text-lg text-gray-700 leading-relaxed mb-8"></p>
+                <p id="result-suggestion" class="text-md font-semibold text-gray-600 bg-gray-200 p-4 rounded-lg mb-8"></p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="startQuiz()" class="bg-gray-300 text-gray-700 font-bold py-3 px-8 rounded-full hover:bg-gray-400 transition-all duration-300">
+                        Chơi lại
+                    </button>
+                    <button onclick="shareResult()" class="bg-theme-secondary text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-600 transition-all duration-300">
+                        Chia sẻ kết quả
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 💭 Trang Lời nguyện / Wish Wall -->
+<section id="wishwall" class="page pt-28 pb-20">
+    <div class="container mx-auto px-6 max-w-3xl text-center">
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-800 mb-6">💭 Gửi Lời Nguyện</h2>
+        <p class="text-xl text-gray-600 leading-relaxed mb-10">Gửi gắm điều ước của bạn tại vùng đất linh thiêng. Điều ước sẽ bay lên như những chiếc đèn lồng...</p>
+
+        <!-- Khu vực hiển thị hiệu ứng -->
+        <div id="wish-wall-container" class="relative w-full h-96 bg-pastel-blue rounded-2xl  mb-8 overflow-hidden">
+            <!-- Create stars -->
+            <div class="stars"></div>
+            <!-- An image with transparency -->
+            <div class="twinkling"></div>
+            <!-- Graphics parts for sea waves -->
+            <svg>
+                <!-- Filter of the graphic -->
+                <filter id="turbulence" x="0" y="0" width="100%" height="100%">
+                    <feturbulence
+                        id="sea-filter"
+                        numOctaves="3"
+                        seed="2"
+                        baseFrequency="0.02 0.15"
+                    ></feturbulence>
+                    <fedisplacementmap scale="2000" in="SourceGraphic"></fedisplacementmap>
+                </filter>
+
+                <!-- Animator of the graphic -->
+                <animate
+                    xlink:href="#sea-filter"
+                    attributeName="baseFrequency"
+                    dur="60s"
+                    keyTimes="0;0.5;1"
+                    values="0.02 0.15;0.02 0.20;0.02 0.15"
+                    repeatCount="indefinite"
+                />
+            </svg>
+        </div>
+
+        <!-- Khu vực nhập liệu -->
+        <div class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+            <input id="wish-input" type="text" placeholder="Viết điều ước của bạn (tối đa 50 ký tự)..." maxlength="50" class="flex-1 px-5 py-3 rounded-full border-2 border-gray-300 focus:border-theme-primary focus:ring-1 focus:ring-theme-primary outline-none transition-all">
+            <button onclick="sendWish()" class="bg-theme-accent text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:bg-amber-600 transition-all duration-300 transform hover:scale-105">
+                Gửi Lời Nguyện
+            </button>
+        </div>
+    </div>
+</section>
