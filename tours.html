@@ -1,59 +1,161 @@
-<!-- 🧳 Trang Dịch vụ & Tour (Tour & Service) -->
-<section id="tours" class="pt-28 pb-20">
-    <div class="container mx-auto px-6">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-            <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-800 mb-6">🧳 Gói Dịch vụ & Tour</h2>
-            <p class="text-xl text-gray-600 leading-relaxed">Những hành trình được thiết kế riêng bởi thế hệ trẻ, dành cho bạn!</p>
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch vụ & Tour</title>
+    <link rel="icon" type="image/ico" href="img/logo copy.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Quicksand', 'sans-serif'],
+                    },
+                    colors: {
+                        'theme-light': '#FEFBF6',
+                        'theme-primary': '#10B981',
+                        'theme-secondary': '#3B82F6',
+                        'theme-accent': '#F59E0B',
+                        'theme-fire': '#EF4444',
+                        'theme-earth': '#D97706',
+                        'pastel-green': '#ECFDF5',
+                        'pastel-blue': '#EFF6FF',
+                        'pastel-yellow': '#FFFBEB',
+                        'pastel-red': '#FEF2F2',
+                        'pastel-orange': '#FFF7ED',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-theme-light font-sans text-gray-800 antialiased">
+
+    <!-- Thanh Điều Hướng (Header) -->
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-white/50 backdrop-blur-sm">
+        <nav class="container mx-auto px-6 py-3 flex items-center justify-between">
+            <a class="font-display font-bold text-xl text-theme-primary flex items-center" href="main.html">
+                <img src="img/logo.jpg" alt="Logo NOVA" class="h-14 w-auto mr-2"> 
+                Ngũ Hành Sơn Discovery Hub
+            </a>
+            <div class="hidden md:flex gap-3 items-center">
+                <a class="nav-link px-3 py-2" href="main.html">Trang chủ</a>
+                <a class="nav-link px-3 py-2" href="home.html">About us</a>
+                <a class="nav-link px-3 py-2" href="tours.html">Dịch vụ & Tour</a>
+                <a class="nav-link px-3 py-2" href="quiz-wishwall.html">Quiz & Wish Wall</a>
+                <a class="nav-cta px-4 py-2 rounded-full" href="contact.html">Liên hệ</a>
+            </div>
+
+            <button id="mobile-toggle" class="md:hidden px-2 py-1" aria-label="Mở menu">☰</button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white/90 border-t">
+            <div class="flex flex-col p-4">
+                <a class="py-2" href="main.html">Trang chủ</a>
+                <a class="py-2" href="home.html">About us</a>
+                <a class="py-2" href="tours.html">Dịch vụ & Tour</a>
+                <a class="py-2" href="quiz-wishwall.html">Quiz & Wish Wall</a>
+                <a class="py-2 font-semibold" href="contact.html">Liên hệ</a>
+            </div>
         </div>
+    </header>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Tour 1: Nửa ngày -->
-            <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2">
-                <img src="img/den-danh-thang-ngu-hanh-son-kham-pha-ngon-thuy-son.jpg" class="w-full h-56 object-cover" alt="Tour Nửa Ngày">
-                <div class="p-8 flex flex-col flex-1">
-                    <h3 class="font-display text-2xl font-bold text-gray-800 mb-3">Tour "Lướt Ngũ Hành"</h3>
-                    <p class="text-gray-600 mb-6 flex-1">Tham quan nhanh 2-3 điểm nổi bật nhất tại Thủy Sơn và làng đá Non Nước. Dành cho du khách bận rộn.</p>
-                    <div class="flex justify-between items-center text-sm text-gray-500 mb-6">
-                        <span class="font-medium">⏱️ Thời lượng: 3-4 tiếng</span>
-                        <span class="font-bold text-theme-primary text-lg">Từ 3xx.xxx VNĐ</span>
+    <!-- Nội dung chính -->
+    <main>
+        <!-- 🧳 Trang Dịch vụ & Tour (Tour & Service) -->
+        <section id="tours" class="pt-28 pb-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-800 mb-6">🧳 Gói Dịch vụ & Tour</h2>
+                    <p class="text-xl text-gray-600 leading-relaxed">Những hành trình được thiết kế riêng bởi thế hệ trẻ, dành cho bạn!</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Tour 1: Nửa ngày -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <img src="img/den-danh-thang-ngu-hanh-son-kham-pha-ngon-thuy-son.jpg" class="w-full h-56 object-cover" alt="Tour Nửa Ngày">
+                        <div class="p-8 flex flex-col flex-1">
+                            <h3 class="font-display text-2xl font-bold text-gray-800 mb-3">Tour "Lướt Ngũ Hành"</h3>
+                            <p class="text-gray-600 mb-6 flex-1">Tham quan nhanh 2-3 điểm nổi bật nhất tại Thủy Sơn và làng đá Non Nước. Dành cho du khách bận rộn.</p>
+                            <div class="flex justify-between items-center text-sm text-gray-500 mb-6">
+                                <span class="font-medium">⏱️ Thời lượng: 3-4 tiếng</span>
+                                <span class="font-bold text-theme-primary text-lg">Từ 3xx.xxx VNĐ</span>
+                            </div>
+                            <button id="tour1" onclick="openTourModal('Tour Lướt Ngũ Hành')" class="w-full bg-theme-primary text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-emerald-600 transition-all duration-300">
+                                Đặt tour ngay
+                            </button>
+                        </div>
                     </div>
-                    <button id="tour1" onclick="openTourModal('Tour Lướt Ngũ Hành')" class="w-full bg-theme-primary text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-emerald-600 transition-all duration-300">
-                        Đặt tour ngay
-                    </button>
+
+                    <!-- Tour 2: Tâm linh -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <img src="img/Dong-am-phu2.jpg" class="w-full h-56 object-cover" alt="Tour Tâm Linh">
+                        <div class="p-8 flex flex-col flex-1">
+                            <h3 class="font-display text-2xl font-bold text-gray-800 mb-3">Tour "Tìm về An yên"</h3>
+                            <p class="text-gray-600 mb-6 flex-1">Hành trình sâu vào các chùa chiền, hang động (Huyền Không, Âm Phủ), nghe kể truyền thuyết và lịch sử.</p>
+                            <div class="flex justify-between items-center text-sm text-gray-500 mb-6">
+                                <span class="font-medium">⏱️ Thời lượng: 4-5 tiếng</span>
+                                <span class="font-bold text-theme-primary text-lg">Từ 4xx.xxx VNĐ</span>
+                            </div>
+                            <button id="tour2" onclick="openTourModal('Tour Lướt Ngũ Hành')" class="w-full bg-theme-primary text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-emerald-600 transition-all duration-300">
+                                Tham khảo tour tại đây
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tour 3: Làng nghề -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <img src="img/lang-da-my-nghe-non-nuoc-07-1700399102.jpg" class="w-full h-56 object-cover" alt="Tour Làng nghề">
+                        <div class="p-8 flex flex-col flex-1">
+                            <h3 class="font-display text-2xl font-bold text-gray-800 mb-3">Tour "Chạm vào Hồn Đá"</h3>
+                            <p class="text-gray-600 mb-6 flex-1">Kết hợp tham quan Mộc Sơn và trải nghiệm thực tế tại làng đá mỹ nghệ Non Nước. Tự tay làm một món quà nhỏ.</p>
+                            <div class="flex justify-between items-center text-sm text-gray-500 mb-6">
+                                <span class="font-medium">⏱️ Thời lượng: 4 tiếng</span>
+                                <span class="font-bold text-theme-primary text-lg">Từ 5xx.xxx VNĐ</span>
+                            </div>
+                            <button id="tour3" onclick="openTourModal('Tour Chạm vào Hồn Đá')" class="w-full bg-theme-primary text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-emerald-600 transition-all duration-300">
+                                Đặt tour ngay
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <!-- Tour 2: Tâm linh -->
-            <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2">
-                <img src="img/Dong-am-phu2.jpg" class="w-full h-56 object-cover" alt="Tour Tâm Linh">
-                <div class="p-8 flex flex-col flex-1">
-                    <h3 class="font-display text-2xl font-bold text-gray-800 mb-3">Tour "Tìm về An yên"</h3>
-                    <p class="text-gray-600 mb-6 flex-1">Hành trình sâu vào các chùa chiền, hang động (Huyền Không, Âm Phủ), nghe kể truyền thuyết và lịch sử.</p>
-                    <div class="flex justify-between items-center text-sm text-gray-500 mb-6">
-                        <span class="font-medium">⏱️ Thời lượng: 4-5 tiếng</span>
-                        <span class="font-bold text-theme-primary text-lg">Từ 4xx.xxx VNĐ</span>
-                    </div>
-                    <button id="tour2" onclick="openTourModal('Tour Lướt Ngũ Hành')" class="w-full bg-theme-primary text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-emerald-600 transition-all duration-300">
-                        Tham khảo tour tại đây
-                    </button>
-                </div>
-            </div>
-
-            <!-- Tour 3: Làng nghề -->
-            <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2">
-                <img src="img/lang-da-my-nghe-non-nuoc-07-1700399102.jpg" class="w-full h-56 object-cover" alt="Tour Làng nghề">
-                <div class="p-8 flex flex-col flex-1">
-                    <h3 class="font-display text-2xl font-bold text-gray-800 mb-3">Tour "Chạm vào Hồn Đá"</h3>
-                    <p class="text-gray-600 mb-6 flex-1">Kết hợp tham quan Mộc Sơn và trải nghiệm thực tế tại làng đá mỹ nghệ Non Nước. Tự tay làm một món quà nhỏ.</p>
-                    <div class="flex justify-between items-center text-sm text-gray-500 mb-6">
-                        <span class="font-medium">⏱️ Thời lượng: 4 tiếng</span>
-                        <span class="font-bold text-theme-primary text-lg">Từ 5xx.xxx VNĐ</span>
-                    </div>
-                    <button id="tour3" onclick="openTourModal('Tour Chạm vào Hồn Đá')" class="w-full bg-theme-primary text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-emerald-600 transition-all duration-300">
-                        Đặt tour ngay
-                    </button>
-                </div>
-            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="font-display text-lg font-semibold mb-2">Dự án "Khám phá & Trải nghiệm Ngũ Hành Sơn"</p>
+            <p>&copy; 2025 - Thực hiện bởi Nova. Phát triển với tình yêu Đà Nẵng.</p>
         </div>
+    </footer>
+
+    <!-- Modal Thông Báo -->
+    <div id="alert-modal" class="fixed bottom-6 right-6 z-[150] bg-gray-900 text-white px-6 py-4 rounded-lg shadow-2xl hidden transition-all duration-300" style="transform: translateY(20px); opacity: 0;">
+        <p id="alert-message"></p>
     </div>
-</section>
+
+    <script src="main.js"></script>
+    <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/oversea/index.js"></script>
+    <script>
+        new CozeWebSDK.WebChatClient({
+            config: {
+                type: 'bot',
+                bot_id: '7573626748227616821',
+                isIframe: false,
+            },
+            auth: {
+                type: 'token',
+                token: 'pat_Ehq9D3fhPg4nAKgS05CYg5VzcyHYa1BkpEe0lpXyWdFzpFPczJDDfojMhJakNHqZ',
+                onRefreshToken: async() => 'token'
+            },
+        });
+    </script>
+</body>
+</html>
